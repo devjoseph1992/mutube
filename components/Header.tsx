@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { FaHeartbeat } from "react-icons/fa"
+import { TbMusicPlus } from "react-icons/tb";
 
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
@@ -103,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({
             <HiHome className="text-black" size={20} />
           </button>
           <button 
-            onClick={() => router.push('/Admirers')} 
+            onClick={() => router.push('/admirers')} 
             className="
               rounded-full 
               p-2 
@@ -117,6 +118,22 @@ const Header: React.FC<HeaderProps> = ({
             "
           >
             <FaHeartbeat className="text-black" size={20} />
+          </button>
+          <button 
+            onClick={() => router.push('/create')} 
+            className="
+              rounded-full 
+              p-2 
+              bg-white 
+              flex 
+              items-center 
+              justify-center 
+              cursor-pointer 
+              hover:opacity-75 
+              transition
+            "
+          >
+            <TbMusicPlus className="text-black" size={20} />
           </button>
           <button 
             onClick={() => router.push('/search')} 
