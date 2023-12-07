@@ -2,6 +2,7 @@
 
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+import { FaHeartbeat } from "react-icons/fa"
 import { twMerge } from "tailwind-merge";
 import { usePathname } from "next/navigation";
 
@@ -29,6 +30,12 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
         label: "Home",
         active: pathname !== "/search",
         href: "/",
+      },
+      {
+        icon: FaHeartbeat,
+        label: "Admirers",
+        href: "/admirers",
+        active: pathname === "/admirers",
       },
       {
         icon: BiSearch,

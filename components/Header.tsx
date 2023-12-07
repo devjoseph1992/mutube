@@ -8,6 +8,7 @@ import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { toast } from "react-hot-toast";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+import { FaHeartbeat } from "react-icons/fa"
 
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
@@ -102,6 +103,22 @@ const Header: React.FC<HeaderProps> = ({
             <HiHome className="text-black" size={20} />
           </button>
           <button 
+            onClick={() => router.push('/Admirers')} 
+            className="
+              rounded-full 
+              p-2 
+              bg-white 
+              flex 
+              items-center 
+              justify-center 
+              cursor-pointer 
+              hover:opacity-75 
+              transition
+            "
+          >
+            <FaHeartbeat className="text-black" size={20} />
+          </button>
+          <button 
             onClick={() => router.push('/search')} 
             className="
               rounded-full 
@@ -117,6 +134,7 @@ const Header: React.FC<HeaderProps> = ({
           >
             <BiSearch className="text-black" size={20} />
           </button>
+          
         </div>
         <div className="flex justify-between items-center gap-x-4">
           {user ? (
