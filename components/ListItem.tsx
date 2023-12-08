@@ -18,6 +18,7 @@ const ListItem: React.FC<ListItemProps> = ({
   name,
   href,
 }) => {
+  
   const router = useRouter();
   const authModal = useAuthModal();
   const { user } = useUser();

@@ -42,7 +42,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
         icon: TbMusicPlus,
         label: "Create Music",
         href: "/create",
-        active: pathname === "/create",
+        active: pathname === "/admirers",
       },
       {
         icon: BiSearch,
@@ -79,7 +79,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
         <Box>
           <div className="flex flex-col gap-y-4 px-5 py-4">
             {routes.map((item) => (
-              <SidebarItem key={item.label} {...item} />
+              <SidebarItem  key={item.label} {...item} />
             ))}
           </div>
         </Box>
