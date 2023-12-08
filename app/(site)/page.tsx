@@ -46,6 +46,16 @@ export default async function Home() {
               image="/images/liked.png" 
               href="liked" 
             />
+            <ListItem 
+              name="Admirers" 
+              image="/images/liked.png" 
+              href="liked" 
+            />
+            <ListItem 
+              name="Wall" 
+              image="/images/liked.png" 
+              href="liked" 
+            />
           </div>
         </div>
       </Header>
