@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { IconType } from "react-icons";
 import { twMerge } from "tailwind-merge";
 
+
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 
@@ -20,6 +21,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   href,
 }) => {
 
+  // modified
   const router = useRouter();
   const authModal = useAuthModal();
   const { user } = useUser();
@@ -29,13 +31,15 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
     if (!user) {
       return authModal.onOpen();
     }
-  
+
     router.push(href);
   };
 
+  // Endmodified
+
   return (
     <Link
-      onClick={onClick}
+    onClick={onClick}
       href={href}
       className={twMerge(
         `

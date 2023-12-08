@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import getSongsByUserId from '@/actions/getSongsByUserId'
 import getActiveProductsWithPrices from '@/actions/getActiveProductsWithPrices'
 import Sidebar from '@/components/Sidebar'
-// import ToasterProvider from '@/providers/ToasterProvider'
+import ToasterProvider from '@/providers/ToasterProvider'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
 import SupabaseProvider from '@/providers/SupabaseProvider'
@@ -31,7 +31,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <ToasterProvider /> */}
+        <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider products={products} />
